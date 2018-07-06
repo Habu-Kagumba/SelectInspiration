@@ -16,7 +16,7 @@ div.cs-skin-elastic {
 
 .cs-skin-elastic > span::after {
 	font-family: 'Font Awesome 5 Free';
-	content: '\f0d8';
+	content: '\f0d7';
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
