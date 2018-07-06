@@ -149,7 +149,7 @@ function factory(classie) {
 				}
 			} );
 
-			return '<li ' + optclass + link + extraAttributes + ' data-option data-value="' + el.value + '">' + icon + '<span>' + el.textContent + '</span></li>';
+			return '<li ' + optclass + link + extraAttributes + ' data-option data-value="' + el.value + '"><span>' + icon + ' ' + el.textContent + '</span></li>';
 		};
 
 		[].slice.call( this.el.children ).forEach( function(el) {
