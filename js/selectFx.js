@@ -115,7 +115,7 @@ function factory(classie) {
 	 */
 	SelectFx.prototype._createSelectEl = function() {
 		var self = this, options = '', createOptionHTML = function(el) {
-			var optclass = '', classes = '', link = '';
+			var optclass = '', classes = '', link = '', icon = '';
 
 			if( el.selectedOpt && !this.foundSelected && !this.hasDefaultPlaceholder ) {
 				classes += 'cs-selected ';
@@ -129,6 +129,11 @@ function factory(classie) {
 			if( el.getAttribute( 'data-link' ) ) {
 				link = 'data-link=' + el.getAttribute( 'data-link' );
 			}
+
+            // icons
+            if (el.getAttribute('data-icon')) {
+                icon = '<i class="fas fa-' + el.getAttribute('data-icon') + '"></i>';
+            }
 
 			if( classes !== '' ) {
 				optclass = 'class="' + classes + '" ';
@@ -144,7 +149,7 @@ function factory(classie) {
 				}
 			} );
 
-			return '<li ' + optclass + link + extraAttributes + ' data-option data-value="' + el.value + '"><span>' + el.textContent + '</span></li>';
+			return '<li ' + optclass + link + extraAttributes + ' data-option data-value="' + el.value + '">' + icon + '<span>' + el.textContent + '</span></li>';
 		};
 
 		[].slice.call( this.el.children ).forEach( function(el) {
