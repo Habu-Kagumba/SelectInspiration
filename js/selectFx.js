@@ -291,7 +291,6 @@ function factory(classie) {
 			}
 			classie.add( this.selEl, 'cs-active' );
 		}
-		
 		setZIndexes();
 	};
 
